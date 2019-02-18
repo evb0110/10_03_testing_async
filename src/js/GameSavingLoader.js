@@ -10,7 +10,11 @@ export default class GameSavingLoader {
       throw new Error(`LOAD_${error}`);
     }
 
-    const gameSavingData = new GameSavingData(data);
-    return gameSavingData.json();
+    try {
+      const gameSavingData = new GameSavingData(data);
+      return await gameSavingData.json();
+    } catch (error) {
+      throw new Error(`JSON_${error}`);
+    }
   }
 }
