@@ -13,9 +13,8 @@ test('mocking rejection of GameSavingData.json()', async () => {
   expect.assertions(1);
 
   try {
-    await GameSavingLoader.load()
+    await GameSavingLoader.load();
   } catch (error) {
     expect(error).toEqual(new Error('JSON_ERROR'));
   }
-
 });
