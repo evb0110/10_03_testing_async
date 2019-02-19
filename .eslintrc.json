@@ -14,7 +14,6 @@
     "no-underscore-dangle": "off",
     "no-plusplus": "off",
     "no-unused-vars": "off",
-    "no-throw-literal": "off",
     "prefer-promise-reject-errors": "off"
   }
 }
